@@ -1,0 +1,273 @@
+*, html {
+    scroll-behavior: smooth;
+}
+body {
+    background-color: #141414;
+    color: white;
+}
+
+.offcanvas {
+    transition: transform 0.3s ease-in-out;
+}
+
+.offcanvas {
+    width: 300px;
+}
+
+.navbar-toggler:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+section {
+    padding-top: 60px;
+    min-height: 100vh;
+}
+
+.home {
+    background: url(img/background.jpg) no-repeat center fixed;
+    background-size: cover;
+}
+
+.box {
+    margin: auto;
+    max-width: 20%;
+    max-height: 20%;
+    padding-top: 8rem;
+}
+
+.image {
+    width: 100%; 
+    height: 100%;
+}
+
+.home h1 {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5em 0;
+    padding-bottom: 4em;
+}
+
+.judul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 35px 0;
+}
+
+.isi {
+    padding: 0 2rem;
+}
+
+/* tooltip */
+[data-tooltip] {
+    position: relative;
+}
+
+[data-tooltip]::before {
+    content: attr(data-tooltip);
+    position: absolute;
+    background-color: #333;
+    color: #fff;
+    padding: 5px 8px;
+    border-radius: 5px;
+    font-size: 20px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: 0.3s ease-in-out;
+    z-index: 10;
+    right: -2rem;
+    bottom: 0.2rem;
+}
+
+/* Arah tooltip muncul */
+[data-tooltip]:hover::before {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(50px);
+}
+
+/* Arah segitiga di atas tooltip */
+[data-tooltip]::after {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: 30%;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 15px 15px 15px;
+    border-color: transparent transparent #333 transparent;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s ease-in-out;
+    z-index: 10;
+}
+
+/* Tampilkan segitiga saat hover */
+[data-tooltip]:hover::after {
+    opacity: 1;
+    visibility: visible;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* tooltip end */
+
+@media only screen and (max-width: 325px) {
+
+    .box {
+    max-width: 50%;
+    max-height: 50%;
+    }
+
+    /* tooltip */
+    .RK[data-tooltip]::before {
+        transform: translateX(-9rem);
+    }
+
+    .RK[data-tooltip]:hover::before {
+        transform: translateY(42px) translateX(-9rem);
+    }
+
+    .JP[data-tooltip]::before {
+        transform: translateX(-6rem);
+    }
+
+    .JP[data-tooltip]:hover::before {
+        transform: translateY(42px) translateX(-6rem);
+    }
+
+    [data-tooltip]::before {
+        transform: translateX(-4rem);
+    }
+
+    [data-tooltip]:hover::before {
+        transform: translateY(42px) translateX(-4rem);
+    }
+
+    [data-tooltip]:hover::after {
+        opacity: 0;
+        visibility: hidden;
+    }
+    /* tooltip end */
+
+    .offcanvas {
+        width: 90% !important;
+        }
+    
+        .offcanvas-body .navbar-nav .nav-item {
+            margin-bottom: 1px;
+        }
+        
+        .offcanvas-body .navbar-nav .nav-link {
+            padding-top: 1px;
+        }
+}
+
+@media only screen and (max-width: 720px) {
+
+    .box {
+        max-width: 50%;
+        max-height: 50%;
+        }
+
+    /* tooltip */
+    .RK[data-tooltip]::before {
+        transform: translateX(-12rem);
+    }
+
+    .RK[data-tooltip]:hover::before {
+        transform: translateY(42px) translateX(-12rem);
+    }
+
+    .JP[data-tooltip]::before {
+        transform: translateX(-9rem);
+    }
+
+    .JP[data-tooltip]:hover::before {
+        transform: translateY(42px) translateX(-9rem);
+    }
+
+    [data-tooltip]::before {
+        transform: translateX(-7rem);
+    }
+
+    [data-tooltip]:hover::before {
+        transform: translateY(42px) translateX(-7rem);
+    }
+
+    [data-tooltip]:hover::after {
+        opacity: 0;
+        visibility: hidden;
+    }
+    /* tooltip end */
+
+    .offcanvas {
+    width: 90% !important;
+    }
+
+    .offcanvas-body .navbar-nav .nav-item {
+        margin-bottom: 1px;
+    }
+    
+    .offcanvas-body .navbar-nav .nav-link {
+        padding-top: 1px;
+    }
+}
+
+@media only screen and (max-width: 430px) and (min-width: 375px) {
+
+    .box {
+        max-width: 50%;
+        max-height: 50%;
+        }
+
+    /* tooltip */
+    .RK[data-tooltip]::before {
+        transform: translateX(-12rem);
+    }
+
+    .RK[data-tooltip]:hover::before {
+        transform: translateY(42px) translateX(-12rem);
+    }
+
+    .JP[data-tooltip]::before {
+        transform: translateX(-9rem);
+    }
+
+    .JP[data-tooltip]:hover::before {
+        transform: translateY(42px) translateX(-9rem);
+    }
+
+    [data-tooltip]::before {
+        transform: translateX(-7rem);
+    }
+
+    [data-tooltip]:hover::before {
+        transform: translateY(42px) translateX(-7rem);
+    }
+
+    [data-tooltip]:hover::after {
+        opacity: 0;
+        visibility: hidden;
+    }
+    /* tooltip end */
+
+    .offcanvas {
+    width: 90% !important;
+    }
+
+    .offcanvas-body .navbar-nav .nav-item {
+        margin-bottom: 1px;
+    }
+    
+    .offcanvas-body .navbar-nav .nav-link {
+        padding-top: 1px;
+    }
+}
